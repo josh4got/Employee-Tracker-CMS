@@ -9,7 +9,8 @@ CREATE TABLE employees (
   last_name VARCHAR(30),
   title VARCHAR(60),
   department VARCHAR(60),
-    salary INT NOT NULL
+    salary INT NOT NULL,
+    manager_id INT
 );
 
 CREATE TABLE departments (
@@ -20,12 +21,12 @@ CREATE TABLE departments (
     ON DELETE SET NULL
 );
 
-CREATE TABLE Roles (
+CREATE TABLE roles (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    job title TEXT NOT NULL,
+    job_title TEXT NOT NULL,
     department TEXT NOT NULL,
     salary INT NOT NULL,
-    FOREIGN KEY (role_id)
+    FOREIGN KEY (employee_id)
     REFERENCES employees(id)
     ON DELETE SET NULL
 );
