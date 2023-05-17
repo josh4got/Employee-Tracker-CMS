@@ -1,6 +1,5 @@
 const express = require("express");
 const mysql = require("mysql2");
-const sequelize = require("./connections");
 require("dotenv").config();
 console.log(process.env);
 
@@ -32,7 +31,7 @@ db.connect((err) => {
 app.use((req, res) => {
   res.status(404).end();
 });
-
+// start server after DB connection
 sequelize.sync().then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
