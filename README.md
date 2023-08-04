@@ -34,7 +34,7 @@ To use the Employee Tracker application, follow these steps:
 
 1. Make sure you have MySQL installed and running on your machine.
 2. Update the database connection settings in the `db.js` file with your MySQL credentials.
-3. Open MySQL shell in an integrated terminal and run the following command 'source schemda.sql'
+3. Open MySQL shell in an integrated terminal and run the following command 'source schema.sql'
 4. Open a terminal and navigate to the project's root directory.
 5. Run `node index.js` to start the application.
 6. Follow the prompts to add, view, or update employee, role, and department information.
